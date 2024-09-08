@@ -13,3 +13,5 @@
 2024.09.07 [9466-텀 프로젝트](Baekjoon/9466.java) : [Gold3] DFS
 
 2024.09.08 [1963-소수 경로](Baekjoon/1963.java) : [Gold4] BFS, 에라토스테네스의 체
+
+2024.09.08 [12904-A와 B](Baekjoon/12904.java) : [Gold5] 문자열, Greedy
