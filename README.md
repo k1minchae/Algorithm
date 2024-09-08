@@ -15,3 +15,19 @@
 2024.09.08 [1963-소수 경로](Baekjoon/1963.java) : [Gold4] BFS, 에라토스테네스의 체
 
 2024.09.08 [12904-A와 B](Baekjoon/12904.java) : [Gold5] 문자열, Greedy
+
+<br>
+
+---
+
+<h3>📚 SQL 고득점 kit</h3>
+
+<h4>SELECT<h4>
+
+[평균/반올림](SQL/SELECT/AVG_ROUND.SQL)
+
+[SQL문 순서 익히기](SQL/SELECT/GROUPBY_HAVING.SQL)
+
+[날짜 형식 지정하기](SQL/SELECT/DATE_FORMAT.SQL)
+
+[JOIN 연습하기](SQL/SELECT/INNERJOIN.SQL)
