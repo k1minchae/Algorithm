@@ -16,6 +16,8 @@
 
 2024.09.08 [12904-A와 B](Baekjoon/12904.java) : [Gold5] 문자열, Greedy
 
+2024.10.19 [Programmers | 입국심사](Programmers/입국심사.java) : [Lv.3] 이분 탐색 (복습)
+
 <br>
 
 ---
