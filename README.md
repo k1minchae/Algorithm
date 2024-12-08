@@ -18,6 +18,8 @@
 
 2024.10.19 [Programmers | 입국심사](Programmers/입국심사.java) : [Lv.3] 이분 탐색 (복습)
 
+2024.12.08 [Programmers | 야근 지수](Programmers/야근지수.java) : [Lv.3] 야근 지수
+
 <br>
 
 ---
