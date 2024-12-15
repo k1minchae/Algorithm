@@ -20,6 +20,8 @@
 
 2024.12.08 [Programmers | 야근 지수](Programmers/야근지수.java) : [Lv.3] 야근 지수
 
+2024.12.16 [Programmers | 인사고과](Programmers/인사고과.java) : [Lv.3] 인사고과
+
 <br>
 
 ---
