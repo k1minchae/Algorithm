@@ -20,7 +20,9 @@
 
 2024.12.08 [Programmers | 야근 지수](Programmers/야근지수.java) : [Lv.3] 야근 지수
 
-2024.12.16 [Programmers | 인사고과](Programmers/인사고과.java) : [Lv.3] 인사고과
+2024.12.16 [Programmers | 인사고과](Programmers/인사고과.java) : [Lv.3] 인사고과 (정렬)
+
+2024.12.16 [Programmers | 수레 움직이기](Programmers/수레 움직이기.java) : [Lv.3] 수레 움직이기 (dfs)
 
 <br>
 
