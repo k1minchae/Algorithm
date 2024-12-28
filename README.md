@@ -22,9 +22,9 @@
 
 2024.12.16 [Programmers | 인사고과](Programmers/인사고과.java) : [Lv.3] 인사고과 (정렬)
 
-2024.12.16 [Programmers | 수레 움직이기](Programmers/수레 움직이기.java) : [Lv.3] 수레 움직이기 (dfs)
+2024.12.16 [Programmers | 수레 움직이기](Programmers/수레움직이기.java) : [Lv.3] 수레 움직이기 (dfs)
 
-2024.12.23 [Programmers | 등산코스 정하기](Programmers/등산 코스 정하기.py) : [Lv.3] 등산 코스 정하기 (다익스트라)
+2024.12.23 [Programmers | 등산코스 정하기](Programmers/등산코스정하기.py) : [Lv.3] 등산 코스 정하기 (다익스트라)
 
 <br>
 
