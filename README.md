@@ -28,6 +28,8 @@
 
 2024.12.31 [Programmers | 단어 변환](Programmers/단어변환.py) : [Lv.3] 단어 변환 (bfs)
 
+2025.01.11 [2812-크게 만들기](Baekjoon/2812.py) : [Gold3] Stack
+
 <br>
 
 ---
