@@ -30,6 +30,8 @@
 
 2025.01.11 [2812-크게 만들기](Baekjoon/2812.py) : [Gold3] Stack
 
+2025.01.28 [1011-Fly me to the Alpha Centauri](Baekjoon/1011.py) : [Gold5] 수학
+
 <br>
 
 ---
