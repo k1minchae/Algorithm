@@ -32,6 +32,8 @@
 
 2025.01.28 [1011-Fly me to the Alpha Centauri](Baekjoon/1011.py) : [Gold5] 수학
 
+2025.02.03 [1577-도로의 개수](Baekjoon/1577.py) : [Gold5] DP
+
 <br>
 
 ---
