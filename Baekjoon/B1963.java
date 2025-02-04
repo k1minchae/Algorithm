@@ -3,20 +3,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class B1963 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
         
-        // ¼Ò¼ö ¹Ì¸® Ã£¾ÆµÎ±â
+        // ï¿½Ò¼ï¿½ ï¿½Ì¸ï¿½ Ã£ï¿½ÆµÎ±ï¿½
         int[] sosu = new int[10000];
         int m = (int) Math.pow(9999, 0.5);
         for (int i = 2; i <= m; i++) {
-            if (sosu[i] == 1) { // ¼Ò¼ö°¡ ¾Æ´Ñ °Í Ç¥½Ã
+            if (sosu[i] == 1) { // ï¿½Ò¼ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ Ç¥ï¿½ï¿½
                 continue;
             }
             for (int num = i * 2; num <= 9999; num += i) {
-                sosu[num] = 1; // iÀÇ ¹è¼ö´Â ¼Ò¼ö°¡ ¾Æ´ÔÀ» Ç¥½Ã
+                sosu[num] = 1; // iï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¼ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
             }
         }
         for (int tc=0; tc<T; tc++) {
@@ -38,28 +38,28 @@ public class Main {
         			break;
         		}
         		for (int i=0; i<=9; i++) {
-        			// 1ÀÇÀÚ¸® º¯È¯
+        			// 1ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½È¯
         			int one = curr / 10 * 10 + i;
         			if (one != curr && sosu[one] == 0 && visited[one] == 0) {
         				q.add(one);
         				visited[one] = visited[curr] + 1;
         			}
         			
-        			// 10ÀÇ ÀÚ¸® º¯È¯
+        			// 10ï¿½ï¿½ ï¿½Ú¸ï¿½ ï¿½ï¿½È¯
         			int ten = curr / 100 * 100 + i * 10 + curr % 10;
         			if (ten != curr && sosu[ten] == 0 && visited[ten] == 0) {
         				q.add(ten);
         				visited[ten] = visited[curr] + 1;
         			}
         			
-        			// 100ÀÇ ÀÚ¸® º¯È¯
+        			// 100ï¿½ï¿½ ï¿½Ú¸ï¿½ ï¿½ï¿½È¯
         			int baek = curr / 1000 * 1000 + i * 100 + curr % 100;
         			if (baek != curr && sosu[baek] == 0 && visited[baek] == 0) {
         				q.add(baek);
         				visited[baek] = visited[curr] + 1;
         			}
         			
-        			// 1000ÀÇ ÀÚ¸® º¯È¯
+        			// 1000ï¿½ï¿½ ï¿½Ú¸ï¿½ ï¿½ï¿½È¯
         			int chun = i * 1000 + curr % 1000;
         			if (chun > 1000 && chun != curr && sosu[chun] == 0 && visited[chun] == 0) {
         				q.add(chun);
@@ -67,7 +67,7 @@ public class Main {
         			}
         		}
         	}
-        	// Å½»ö ½ÇÆÐ½Ã Impossible Ãâ·Â
+        	// Å½ï¿½ï¿½ ï¿½ï¿½ï¿½Ð½ï¿½ Impossible ï¿½ï¿½ï¿½
         	if (isFind == false) {
         		System.out.println("Impossible");
         	}

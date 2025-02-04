@@ -4,8 +4,8 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
-	// val°ú °°°Å³ª ´õ Å« °Í Áß °¡Àå ¿ÞÂÊ¿¡ ÀÖ´Â idx¸¦ ¹ÝÈ¯ÇÑ´Ù (lowBound)
+public class B3020 {
+	// valï¿½ï¿½ ï¿½ï¿½ï¿½Å³ï¿½ ï¿½ï¿½ Å« ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½Ö´ï¿½ idxï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½ (lowBound)
 	static int lowBound(int[] array, int val) {
 		int low = 0;
 		int high = array.length;
@@ -21,7 +21,7 @@ public class Main {
 		return low;
 	}
 	
-	// valº¸´Ù Å« °Í Áß °¡Àå ¿ÞÂÊ¿¡ ÀÖ´Â idx¸¦ ¹ÝÈ¯ÇÑ´Ù (upperBound)
+	// valï¿½ï¿½ï¿½ï¿½ Å« ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ê¿ï¿½ ï¿½Ö´ï¿½ idxï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ñ´ï¿½ (upperBound)
 	static int upperBound(int[] array, int val) {
 		int low = 0;
 		int high = array.length;
@@ -39,32 +39,32 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int N = Integer.parseInt(st.nextToken()); // µ¿±¼ ±æÀÌ
-		int H = Integer.parseInt(st.nextToken()); // µ¿±¼ ³ôÀÌ
+		int N = Integer.parseInt(st.nextToken()); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		int H = Integer.parseInt(st.nextToken()); // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
-		int[] bottom = new int[N/2]; // ¼®¼ø ¹è¿­
-		int[] top = new int[N/2]; // Á¾À¯¼® ¹è¿­
+		int[] bottom = new int[N/2]; // ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+		int[] top = new int[N/2]; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
 		
 		for (int i = 0; i < N; i++) {
-			if (i % 2 == 0) { // ¼®¼ø
+			if (i % 2 == 0) { // ï¿½ï¿½ï¿½ï¿½
 				bottom[i / 2] = Integer.parseInt(br.readLine());
-			} else { // Á¾À¯¼®
+			} else { // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				top[(i - 1) / 2] = Integer.parseInt(br.readLine());
 			}
 		}
 		
-		// ¼®¼ø°ú Á¾À¯¼®À» Á¤·Ä
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		Arrays.sort(bottom);
 		Arrays.sort(top);
 		
-		int res = N; // ÃÖ¼Ò ºÎµúÈ÷´Â Àå¾Ö¹° ¼ö
-		int cnt = 1; // ÃÖ¼Ò Àå¾Ö¹°ÀÌ ¹ß»ýÇÏ´Â ±¸°£ÀÇ ¼ö
+		int res = N; // ï¿½Ö¼ï¿½ ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ö¹ï¿½ ï¿½ï¿½
+		int cnt = 1; // ï¿½Ö¼ï¿½ ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 		
 		for (int h = 1; h <= H; h++) {
-			// ¼®¼ø: ³ôÀÌ h¿¡¼­ h ÀÌ»óÀÎ ¼®¼øÀ» ±¸ÇÔ
+			// ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ hï¿½ï¿½ï¿½ï¿½ h ï¿½Ì»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			int temp = N / 2 - lowBound(bottom, h) + N / 2 - lowBound(top, H - h + 1);
 			
-			// ÃÖ¼Ò°ªÀ» °»½Å
+			// ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			if (res > temp) {
 				res = temp;
 				cnt = 1;

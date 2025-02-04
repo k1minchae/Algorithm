@@ -3,22 +3,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Main {
+public class B9466 {
     static int[] visited; 
     static int cycleNode;
 
     public static void dfs(int[] arr, int node, ArrayList<Integer> cycleList, HashMap<Integer, Integer> cycleIdx, int depth) {
         visited[node] = 1;
-        cycleList.add(node); // ½ÎÀÌÅ¬ ÈÄº¸ ¸®½ºÆ®¿¡ Ãß°¡
+        cycleList.add(node); // ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½Äºï¿½ ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ß°ï¿½
         int next = arr[node];
-        cycleIdx.put(node, depth); // ½ÎÀÌÅ¬ ÈÄº¸¸®½ºÆ® Áß ÇöÀç ³ëµåÀÇ ¼ø¼­(idx) ÀúÀå
+        cycleIdx.put(node, depth); // ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½Äºï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(idx) ï¿½ï¿½ï¿½ï¿½
 
-        if (visited[next] == 1) { // ÀÌ¹Ì ¹æ¹®ÇÑ ³ëµå
-            if (cycleIdx.containsKey(next)) { // ½ÎÀÌÅ¬ O
-                // ½ÎÀÌÅ¬ ¹ß°ß, ½ÎÀÌÅ¬ ½ÃÀÛÁ¡À» ±â·Ï
+        if (visited[next] == 1) { // ï¿½Ì¹ï¿½ ï¿½æ¹®ï¿½ï¿½ ï¿½ï¿½ï¿½
+            if (cycleIdx.containsKey(next)) { // ï¿½ï¿½ï¿½ï¿½Å¬ O
+                // ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½ß°ï¿½, ï¿½ï¿½ï¿½ï¿½Å¬ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
                 cycleNode = cycleIdx.get(next);
             }
-        } else if (visited[next] == 0) { // ¹æ¹®ÇÏÁö ¾ÊÀº °æ¿ì¿¡¸¸ DFS
+        } else if (visited[next] == 0) { // ï¿½æ¹®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ì¿¡ï¿½ï¿½ DFS
             dfs(arr, next, cycleList, cycleIdx, depth + 1);
         }
     }
@@ -37,19 +37,19 @@ public class Main {
             }
 
             visited = new int[N + 1];
-            int answer = N; // ÆÀ¿¡ ¼ÓÇÏÁö ¾ÊÀº »ç¶÷ÀÇ ¼ö
+            int answer = N; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 
             for (int i = 1; i <= N; i++) {
                 if (visited[i] == 0) {
                     ArrayList<Integer> cycleList = new ArrayList<>();
                     HashMap<Integer, Integer> cycleIdx = new HashMap<>();
-                    cycleNode = -1; // ½ÎÀÌÅ¬ÀÌ ¹ß»ýÇÏÁö ¾Ê¾ÒÀ½À» ÀÇ¹Ì
+                    cycleNode = -1; // ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¹ï¿½
 
                     dfs(array, i, cycleList, cycleIdx, 0);
 
-                    // ½ÎÀÌÅ¬ÀÌ ¹ß»ýÇÑ °æ¿ì Ã³¸®
+                    // ï¿½ï¿½ï¿½ï¿½Å¬ï¿½ï¿½ ï¿½ß»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
                     if (cycleNode != -1) {
-                        answer -= (cycleList.size() - cycleNode); // ½ÎÀÌÅ¬ Å©±â¸¸Å­ »©±â
+                        answer -= (cycleList.size() - cycleNode); // ï¿½ï¿½ï¿½ï¿½Å¬ Å©ï¿½â¸¸Å­ ï¿½ï¿½ï¿½ï¿½
                     }
                 }
             }

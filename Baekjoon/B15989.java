@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class B15989 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
@@ -12,23 +12,23 @@ public class Main {
 			int[] dp = new int[N+1];
 			dp[1] = 1;
 			for (int i=2; i<N+1; i++) {
-				int divideTo3 = i / 3; // 3À¸·Î ³ª´³À» ¶§ ¸ò
-				int additionalVal = 0; // ÀÌÀü ¼ýÀÚ¿¡¼­ ´õÇØ¾ß ÇÒ °ª
+				int divideTo3 = i / 3; // 3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
+				int additionalVal = 0; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½ï¿½ ï¿½ï¿½
 				
-				// Â¦¼ö¶ó¸é
+				// Â¦ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (i % 2 == 0) {
-					// ¸ðµÎ 2·Î ÀÌ·ç¾îÁø case Ãß°¡
+					// ï¿½ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ case ï¿½ß°ï¿½
 					additionalVal += 1; 
 						
-				// È¦¼ö¶ó¸é
+				// È¦ï¿½ï¿½ï¿½ï¿½ï¿½
 				} else {
-					// 3À¸·Î ³ª´³À» ¶§ ¸òÀÌ È¦¼ö¶ó¸é
+					// 3ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È¦ï¿½ï¿½ï¿½ï¿½ï¿½
 					if (divideTo3 % 2 == 1) {
-						// È¦¼ö°¡ ÇÏ³ª ´õ ¸¹À¸¹Ç·Î 1 Ãß°¡
+						// È¦ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ 1 ï¿½ß°ï¿½
 						additionalVal += 1;
 					}
 				}
-				// 3 ¶Ç´Â 3°ú 2·Î ÀÌ·ç¾îÁø case Ãß°¡
+				// 3 ï¿½Ç´ï¿½ 3ï¿½ï¿½ 2ï¿½ï¿½ ï¿½Ì·ï¿½ï¿½ï¿½ï¿½ case ï¿½ß°ï¿½
 				int temp = divideTo3 / 2;
 				additionalVal += temp;
 				dp[i] = dp[i-1] + additionalVal;

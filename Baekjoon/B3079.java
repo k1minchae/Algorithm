@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main {
+public class B3079 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -22,28 +22,28 @@ public class Main {
 		}
 		
 		Arrays.sort(arr);
-		// ÃÖ´ë°ª: °¡Àå ¿À·¡°É¸®´Â ½É»ç°üÇÑÅ× M¸íÀÌ ÀüºÎ ½É»ç¹ÞÀ½
+		// ï¿½Ö´ë°ª: ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½É¸ï¿½ï¿½ï¿½ ï¿½É»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Mï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½É»ï¿½ï¿½ï¿½ï¿½
 		right *= M; 
 		
 		long res = 0;
 		while (left <= right) {
-			// mid°ª: °¡´ÉÇÑ ¸ðµç ½Ã°£´ë Áß ÃÖÀûÀÇ ½Ã°£ Å½»ö
+			// midï¿½ï¿½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ Å½ï¿½ï¿½
 			long mid = (left + right) / 2;
 			long cnt = 0;
 			for (int i=0; i<N; i++) {
-				// mid ½Ã°£µ¿¾È i ¹ø ½É»ç´ë¿¡¼­ ¸î¸í ¹ÞÀ» ¼ö ÀÖ´ÂÁö ´õÇØÁÜ
+				// mid ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ i ï¿½ï¿½ ï¿½É»ï¿½ë¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				cnt += (mid / arr[i]);
-				// °¡´ÉÇÏ´Ù¸é ´õÀÌ»ó È®ÀÎÇÏÁö ¾ÊÀ½
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Ù¸ï¿½ ï¿½ï¿½ï¿½Ì»ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				if (cnt > M) {
 					break;
 				}
 			}
-			// °¡´ÉÇÏÁö ¾Ê´Ù¸é ¼ýÀÚ Å°¿ì±â
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ï¿½
 			if (cnt < M) {
 				left = mid + 1;
 			}
 			else {
-				// °¡´ÉÇÏ´Ù¸é ¼ýÀÚ ÁÙÀÌ±â
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Ï´Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½
 				right = mid - 1;
 				res = mid;
 			}

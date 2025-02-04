@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class B1446 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
@@ -46,13 +46,13 @@ public class Main {
 				}
 			}
 			
-			// ÇöÀ§Ä¡¿¡¼­ °¥ ¼ö ÀÖ´Â Áö¸§±æÀÌ ÀÖ´Â °æ¿ì
+			// ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
 			if (fastRoad.get(i) != null) {
 				for (int end: fastRoad.get(i).keySet()) {
-					// ¾ÆÁ÷ ÇÑ ¹øµµ ¹æ¹®ÇÑ Àû ¾øÀ½
+					// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½æ¹®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 					if (dp[end] == 0) {
 						dp[end] = Math.min(end, dp[i] + fastRoad.get(i).get(end));
-					} else { // ¹æ¹®ÇÑ Àû ÀÖÀ½
+					} else { // ï¿½æ¹®ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 						dp[end] = Math.min(dp[end], dp[i] + fastRoad.get(i).get(end));
 					}
 				}
