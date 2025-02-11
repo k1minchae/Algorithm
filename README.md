@@ -40,6 +40,8 @@
 
 2025.02.11 [2631-줄세우기](Baekjoon/B2631.java) : [Gold4] DP
 
+2025.02.11 [1339-단어수학](Baekjoon/1339.py) : [Gold4] Greedy
+
 <br>
 
 ---
