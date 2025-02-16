@@ -54,6 +54,8 @@
 
 2025.02.16 [16953-A → B](Baekjoon/B16953.java) : [Silver2] DFS
 
+2025.02.16 [2096-내려가기](Baekjoon/B2096.java) : [Gold5] DP
+
 <br>
 
 ---
