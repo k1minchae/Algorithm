@@ -52,6 +52,8 @@
 
 2025.02.15 [6064-카잉 달력](Baekjoon/6064.py) : [Silver1] 수학
 
+2025.02.16 [16953-A → B](Baekjoon/B16953.java) : [Silver2] DFS
+
 <br>
 
 ---
