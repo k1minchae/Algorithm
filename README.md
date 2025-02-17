@@ -58,6 +58,8 @@
 
 2025.02.17 [7568-덩치](Baekjoon/7568.py) : [Silver5] 브루트포스
 
+2025.02.17 [1043-거짓말](Baekjoon/1043.py) : [Gold4] 그래프, Union Find
+
 <br>
 
 ---
