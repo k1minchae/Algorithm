@@ -74,6 +74,8 @@
 
 2025.02.24 [11866-요세푸스 문제 0](Baekjoon/11866.py) : [Silver4] 큐
 
+2025.02.25 [18110-solved.ac](Baekjoon/B18110.java) : [Silver4] 수학
+
 ##
 
 <h3>📚 SQL 고득점 kit</h3>
