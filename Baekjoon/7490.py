@@ -3,7 +3,7 @@ import sys
 input = sys.stdin.readline
 t = int(input())
 ans = [[] for _ in range(10)]
-not_num = ['+', '-', ' ']
+not_num = [' ', '+', '-']
 
 # 백트래킹 함수
 def btc(temp, cnt, n):
@@ -15,12 +15,9 @@ def btc(temp, cnt, n):
         return
     
     # 백트래킹
-    temp[2 * cnt - 1] = ' '
-    btc(temp, cnt + 1, n)
-    temp[2 * cnt - 1] = '+'
-    btc(temp, cnt + 1, n)
-    temp[2 * cnt - 1] = '-'
-    btc(temp, cnt + 1, n)
+    for op in not_num:
+        temp[2 * cnt - 1] = op
+        btc(temp, cnt + 1, n)
 
 # 결과값이 0인지 체크하는 함수
 def check_zero(arr):
